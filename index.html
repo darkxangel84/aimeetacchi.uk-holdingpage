@@ -10,22 +10,59 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oxygen:400,700');
 
+
+    body {
+        background: rgba(34,40,49,1);
+        color: #eee;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    a { color: #eee;}
+
+    #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    }
+
     main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-family: 'Oxygen', sans-serif;
+        height: 100vh;
+        background: rgba(34,40,49,0.7);
     }
 
     h1 {
-        font-family: 'Fjalla One', sans-serif
+        font-family: 'Fjalla One', sans-serif;
+        text-align: center;
     }
 
-    p {}
+    @media(min-width: 640px) {
+        h1 {
+            font-size: 50px;
+        }
+    }
 </style>
 
 <body>
     <div class="div">
+        <video autoplay muted loop id="myVideo">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
         <main>
-            <h1>Aimee Tacchi | Front End Developer</h1>
-            <p>New Site Coming Soon!</p>
+            <h1> >_ Aimee Tacchi | Front End Developer</h1>
+            <p>New Site Coming Soon!<br /><br />
+                For now please visit <a href="https://www.aimee-tacchi.co.uk" target="_blank"><strong>Here</strong></a></p>
         </main>
     </div>
 </body>
